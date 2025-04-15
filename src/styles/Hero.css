@@ -1,0 +1,132 @@
+.hero {
+  padding: 8rem 0 5rem;
+  background-color: #f9f9f9;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn.primary {
+  background-color: #0070f3;
+  color: white;
+  border: 1px solid #0070f3;
+}
+
+.btn.primary:hover {
+  background-color: #005fcf;
+  border-color: #005fcf;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: #0070f3;
+  border: 1px solid #0070f3;
+}
+
+.btn.secondary:hover {
+  background-color: rgba(0, 112, 243, 0.1);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile-image-placeholder {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  background-image: linear-gradient(
+      45deg,
+      #f3f3f3 25%,
+      transparent 25%,
+      transparent 75%,
+      #f3f3f3 75%,
+      #f3f3f3
+    ),
+    linear-gradient(
+      45deg,
+      #f3f3f3 25%,
+      transparent 25%,
+      transparent 75%,
+      #f3f3f3 75%,
+      #f3f3f3
+    );
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 0 3rem;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .profile-image-placeholder {
+    width: 240px;
+    height: 240px;
+  }
+}
