@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
@@ -42,5 +42,6 @@
 }
 
 main {
+  flex: 1;
   padding-top: 60px; /* To account for the fixed header */
 }

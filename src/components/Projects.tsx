@@ -8,36 +8,77 @@ interface Project {
   imageUrl: string;
   liveUrl: string;
   sourceUrl: string;
+  isPrivate: boolean;
 }
 
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "Project One",
-    description: "A responsive web application with modern UI/UX principles.",
-    technologies: ["React", "TypeScript", "CSS"],
-    imageUrl: "/project1.jpg",
-    liveUrl: "https://example.com/project1",
-    sourceUrl: "https://github.com/username/project1",
+    title: "Reservation-Link Dashboard",
+    description:
+      "Reservation-Link, the ultimate reservation management solution designed to simplify and enhance the way businesses handle guest reservations, events, payments, and seating arrangements.",
+    technologies: [
+      "Next.js",
+      "Sequelize",
+      "GraphQL",
+      "Node.js",
+      "Web Development",
+    ],
+    imageUrl: "reservation-link.jpg",
+    liveUrl: "",
+    sourceUrl: "",
+    isPrivate: true,
   },
   {
     id: 2,
-    title: "Project Two",
+    title: "ElMaestro Code",
     description:
-      "Full-stack application with user authentication and database.",
-    technologies: ["Node.js", "Express", "MongoDB", "React"],
-    imageUrl: "/project2.jpg",
-    liveUrl: "https://example.com/project2",
-    sourceUrl: "https://github.com/username/project2",
+      "ElMaestro Code is a software development company dedicated to empowering businesses of all sizes in the digital era.",
+    technologies: ["React", "Node.js", "AWS", "Web Development"],
+    imageUrl: "elmaestro-code.png",
+    liveUrl: "https://elmaestrocode.com",
+    sourceUrl: "",
+    isPrivate: true,
   },
   {
     id: 3,
-    title: "Project Three",
-    description: "Mobile-first web application with offline capabilities.",
-    technologies: ["React", "PWA", "Firebase"],
-    imageUrl: "/project3.jpg",
-    liveUrl: "https://example.com/project3",
-    sourceUrl: "https://github.com/username/project3",
+    title: "Khulud Durri",
+    description:
+      "​Khulud Durri is a consciousness coach and researcher dedicated to helping individuals discover their true selves and expand their worlds. She offers workshops and sessions aimed at personal transformation and self-awareness.",
+    technologies: [
+      "WordPress",
+      "Divi",
+      "WooCommerce",
+      "Zoom Integration",
+      "Stripe Integration",
+      "Web Development",
+    ],
+    imageUrl: "khulud-durri.png",
+    liveUrl: "https://khuluddurri.com",
+    sourceUrl: "",
+    isPrivate: true,
+  },
+  {
+    id: 4,
+    title: "Ikigai Team",
+    description:
+      "Ikigai Team is a network marketing group founded in 2019, focused on empowering and educating individuals—regardless of age, background, or experience—to increase their cash flow and explore entrepreneurial opportunities.",
+    technologies: ["WordPress", "Divi", "Web Development"],
+    imageUrl: "ikigai.png",
+    liveUrl: "https://ikigaifamily.com",
+    sourceUrl: "",
+    isPrivate: true,
+  },
+  {
+    id: 5,
+    title: "Gates Hub",
+    description:
+      "Gates Hub is a platform that provides a comprehensive range of investment and education opportunities, empowering individuals to achieve financial freedom and secure their future. It also provides the investors with a dashboard to manage their investments and track their progress.",
+    technologies: ["Angular", "Node.js", "AWS", "Web Development"],
+    imageUrl: "gates-hub.png",
+    liveUrl: "https://gateshub.com",
+    sourceUrl: "",
+    isPrivate: true,
   },
 ];
 
@@ -62,7 +103,9 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="project-links">
+              </div>
+              <div className="project-links">
+                {project.liveUrl && (
                   <a
                     href={project.liveUrl}
                     target="_blank"
@@ -71,6 +114,18 @@ const Projects = () => {
                   >
                     View Live
                   </a>
+                )}
+                {project.isPrivate ? (
+                  <div className="private-project-button">
+                    <span className="btn small secondary disabled">
+                      Source Code
+                    </span>
+                    <div className="private-badge">
+                      <span className="lock-icon">🔒</span>
+                      <span className="private-text">Private Repository</span>
+                    </div>
+                  </div>
+                ) : (
                   <a
                     href={project.sourceUrl}
                     target="_blank"
@@ -79,7 +134,7 @@ const Projects = () => {
                   >
                     Source Code
                   </a>
-                </div>
+                )}
               </div>
             </div>
           ))}

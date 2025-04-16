@@ -1,0 +1,235 @@
+.github-profiles {
+  background-color: white;
+  padding: 5rem 0;
+}
+
+.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+/* Profile Tabs */
+.profile-section {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profile-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  justify-content: center;
+}
+
+.profile-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 24px;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+.profile-tab:hover {
+  border-color: var(--platform-color, var(--primary-color));
+  color: var(--platform-color, var(--primary-color));
+}
+
+.profile-tab.active {
+  background-color: var(--platform-color, var(--primary-color));
+  border-color: var(--platform-color, var(--primary-color));
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.platform-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.platform-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Profile Cards */
+.profile-content {
+  position: relative;
+  min-height: 400px;
+}
+
+.profile-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  display: none;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+  border-color: var(--platform-color, var(--primary-color));
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--platform-color, var(--primary-color));
+}
+
+.profile-info h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+}
+
+.username {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.platform-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--platform-color, var(--primary-color));
+}
+
+.profile-description {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.profile-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 100px;
+  padding: 1rem;
+  background-color: var(--card-bg-lighter);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--platform-color, var(--primary-color));
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--platform-color, var(--primary-color));
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.profile-actions {
+  margin-top: 2rem;
+}
+
+.profile-actions .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.profile-actions .btn.primary {
+  background-color: var(--platform-color, var(--primary-color));
+  color: white;
+  border: 2px solid var(--platform-color, var(--primary-color));
+}
+
+.profile-actions .btn.primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-info {
+    text-align: center;
+  }
+
+  .profile-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-item {
+    padding: 1rem 0;
+  }
+
+  .profile-actions {
+    flex-direction: column;
+  }
+
+  .profile-card {
+    padding: 1.5rem;
+  }
+}

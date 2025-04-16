@@ -9,32 +9,40 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-logo">
             <h3>Pierre Ghaly</h3>
-            <p>Full Stack Developer</p>
+            <p>Software Engineering Lead</p>
           </div>
           <div className="social-links">
             <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <i className="social-icon github">GitHub</i>
-            </a>
-            <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/pierre-ghaly"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <i className="social-icon linkedin">LinkedIn</i>
+              <i className="footer-icon linkedin"></i>
             </a>
             <a
-              href="https://twitter.com/yourusername"
+              href="https://github.com/pierre-ghaly"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Twitter"
+              aria-label="GitHub"
             >
-              <i className="social-icon twitter">Twitter</i>
+              <i className="footer-icon github"></i>
+            </a>
+            <a
+              href="https://stackoverflow.com/users/123456/pierre-ghaly"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Stack Overflow"
+            >
+              <i className="footer-icon stackoverflow"></i>
+            </a>
+            <a
+              href="https://wa.me/201275888268"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <i className="footer-icon whatsapp"></i>
             </a>
           </div>
         </div>
@@ -43,6 +51,7 @@ const Footer = () => {
           <div className="footer-nav">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
           </div>
         </div>
