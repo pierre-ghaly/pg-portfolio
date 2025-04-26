@@ -80,6 +80,17 @@ const projectsData: Project[] = [
     sourceUrl: "",
     isPrivate: true,
   },
+  {
+    id: 6,
+    title: "CrowdFunding Smart Contract",
+    description:
+      "A smart contract for a crowd funding platform that allows users to create projects and raise funds from other users.",
+    technologies: ["Solidity"],
+    imageUrl: "crowdfunding.png",
+    liveUrl: "",
+    sourceUrl: "https://github.com/pierre-ghaly/CrowdFunding",
+    isPrivate: false,
+  },
 ];
 
 const Projects = () => {

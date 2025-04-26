@@ -28,14 +28,12 @@ const profiles: ProfessionalProfile[] = [
     platform: "GitHub",
     username: "pierre-ghaly",
     displayName: "Pierre Ghaly",
-    description:
-      "Check out my open source contributions and personal projects on GitHub, where I share code snippets and collaborate with developers worldwide.",
+    description: "Check out my contributions and personal projects on GitHub.",
     avatarUrl: "https://avatars.githubusercontent.com/u/37373564?v=4",
     profileUrl: "https://github.com/pierre-ghaly",
     stats: [
-      { label: "Repositories", value: 42, icon: "📦" },
-      { label: "Stars", value: 128, icon: "⭐" },
-      { label: "Contributions", value: "1,240+", icon: "🧩" },
+      { label: "Repositories", value: 8, icon: "📦" },
+      { label: "Contributions", value: "200+", icon: "🧩" },
     ],
     color: "#24292e",
     icons: {
@@ -50,13 +48,14 @@ const profiles: ProfessionalProfile[] = [
     username: "pierre-ghaly",
     displayName: "Pierre Ghaly",
     description:
-      "Explore my contributions to the developer community through questions, answers, and discussions on Stack Overflow, where I help solve coding challenges.",
-    avatarUrl: "profile.jpeg", // Replace with actual SO avatar
-    profileUrl: "https://stackoverflow.com/users/6192934/pierre-ghaly", // Replace with actual SO profile
+      "Explore my contributions to the developer community through questions, answers, and discussions on Stack Overflow.",
+    avatarUrl: "profile.jpeg",
+    profileUrl: "https://stackoverflow.com/users/6192934/pierre-ghaly",
     stats: [
-      { label: "Reputation", value: "15.4k", icon: "🏆" },
-      { label: "Answers", value: 87, icon: "✅" },
-      { label: "Reach", value: "45k+", icon: "👥" },
+      { label: "Reputation", value: "777", icon: "🏆" },
+      { label: "Answers", value: 12, icon: "✅" },
+      { label: "Badges", value: 29, icon: "🏅" },
+      { label: "People Reach", value: "36k+", icon: "👥" },
     ],
     color: "#f48024",
     icons: {
@@ -71,14 +70,10 @@ const profiles: ProfessionalProfile[] = [
     username: "pierre-ghaly",
     displayName: "Pierre Ghaly",
     description:
-      "Connect with me professionally on LinkedIn to explore my career journey, endorsements, and professional network within the technology industry.",
+      "Connect with me professionally on LinkedIn to explore my career journey and professional network within the technology industry.",
     avatarUrl: "profile.jpeg",
-    profileUrl: "https://linkedin.com/in/pierre-ghaly", // Replace with actual LinkedIn profile
-    stats: [
-      { label: "Connections", value: "500+", icon: "🔗" },
-      { label: "Endorsements", value: 48, icon: "👍" },
-      { label: "Articles", value: 12, icon: "📝" },
-    ],
+    profileUrl: "https://linkedin.com/in/pierre-ghaly",
+    stats: [{ label: "Connections", value: "2,500+", icon: "🔗" }],
     color: "#0077b5",
     icons: {
       default: "icons/linkedin-black.svg",
@@ -103,12 +98,11 @@ const ProfessionalProfiles = () => {
 
         <div className="profile-tabs">
           {profiles.map((profile) => {
-            // Determine which icon to show based on state
-            let iconSrc = profile.icons.default; // Default black icon
+            let iconSrc = profile.icons.default;
             if (activeProfile === profile.id) {
-              iconSrc = profile.icons.active; // Active white icon
+              iconSrc = profile.icons.active;
             } else if (hoveredProfile === profile.id) {
-              iconSrc = profile.icons.hover; // Hover colored icon
+              iconSrc = profile.icons.hover;
             }
 
             return (

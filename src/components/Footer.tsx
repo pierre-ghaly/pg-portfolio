@@ -29,7 +29,7 @@ const Footer = () => {
               <i className="footer-icon github"></i>
             </a>
             <a
-              href="https://stackoverflow.com/users/123456/pierre-ghaly"
+              href="https://stackoverflow.com/users/6192934/pierre-ghaly"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Stack Overflow"

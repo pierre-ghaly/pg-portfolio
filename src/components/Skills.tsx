@@ -7,45 +7,40 @@ interface SkillCategory {
 
 const skillsData: SkillCategory[] = [
   {
+    title: "Programming Languages",
+    skills: ["JavaScript", "TypeScript", "C#", "Java", "Solidity"],
+  },
+  {
     title: "Frontend",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Redux",
-      "SASS",
-      "Tailwind CSS",
-    ],
+    skills: ["HTML", "CSS", "React", "Next.js", "Angular"],
   },
   {
     title: "Backend",
-    skills: [
-      "Node.js",
-      "Express",
-      "Python",
-      "Django",
-      "RESTful APIs",
-      "GraphQL",
-    ],
+    skills: ["Node.js", "Express", ".NET"],
   },
   {
     title: "Database",
-    skills: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
+    skills: ["MongoDB", "PostgreSQL", "MySQL", "Sequelize"],
   },
   {
-    title: "Tools & Others",
-    skills: [
-      "Git",
-      "GitHub",
-      "Docker",
-      "CI/CD",
-      "Webpack",
-      "Vite",
-      "Jest",
-      "Figma",
-    ],
+    title: "DevOps & Tools",
+    skills: ["Git", "GitHub", "Docker"],
+  },
+  {
+    title: "Cloud Services",
+    skills: ["AWS", "Azure", "Firebase"],
+  },
+  {
+    title: "Web Services & APIs",
+    skills: ["RESTful APIs", "GraphQL"],
+  },
+  {
+    title: "Blockchain Development",
+    skills: ["Solidity", "Web3.js"],
+  },
+  {
+    title: "CMS Platforms",
+    skills: ["WordPress", "Shopify", "Payload"],
   },
 ];
 

@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+  // TODO: Host on portfolio.pgelmaestro.com and redirect from github to it.
   return (
     <>
       <Header />
