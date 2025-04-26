@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pierreghaly.github.io/pg-portfolio/sitemap.xml 

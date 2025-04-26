@@ -1,0 +1,16 @@
+{
+  "name": "Pierre Ghaly | Software Engineering Lead",
+  "short_name": "Pierre Ghaly",
+  "description": "Pierre Ghaly - Software Engineering Lead - Portfolio",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
